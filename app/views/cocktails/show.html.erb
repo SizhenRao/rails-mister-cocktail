@@ -1,5 +1,15 @@
 <%= @cocktail.name %>
-<%= @cocktail.ingredients %>
+<br>
 
-<%= link_to "Adjust this postion", edit_cocktail_path %>
-<%= link_to "Add ingredients", edit_cocktail_path %>
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+  <%= f.association :ingredients %>
+  <%= f.button :submit %>
+<% end %>
+
+<br>
+
+<p><%= link_to 'delete', cocktail_path(@cocktail), method: :delete %></p>
+<br>
+
+<%= link_to "Go back", cocktails_path %>

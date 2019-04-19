@@ -1,14 +1,24 @@
-<h1> A cocktail for each city </h1>
+<div class="home-banner">
+  <h1><span id="banner-typed-text">Cocktail</span></h1>
+</div>
 
+<div id="title">
+  <h2>Available cities</h2>
+</div>
 
-<ul>
+<div class="container">
   <% @cocktails.each do |cocktail| %>
-    <li> <%= link_to cocktail.name, cocktail_path(cocktail)  %>
-    </li>
-
+    <div class="card">
+        <h5 class="card-title">
+          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </h5>
+    </div>
   <% end %>
-</ul>
+</div>
 
+<br>
+<div class="container">
+  <div class="make-new"> <%= link_to "Create a new cocktail for your city", new_cocktail_path %>
+  </div>
+</div>
 
-
-<%= link_to "Create a new potion", new_cocktail_path %>
