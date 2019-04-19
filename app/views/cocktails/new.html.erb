@@ -1,9 +1,10 @@
 <h1>Create a new magi-tail</h1>
      <%= simple_form_for @cocktail do |f| %>
        <%= f.input :name %>
-       <%= f.submit class: 'btn btn-primary' %>
+       <%= f.button :submit %>
      <% end %>
 
-<%= link_to "Go back", cocktails_path %>
 
+
+<%= link_to "Go back", cocktails_path %>
 

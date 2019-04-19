@@ -1,15 +1,33 @@
-<%= @cocktail.name %>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Ingredient</th>
+    </tr>
+  </thead>
+
+  <tbody>
+     <tr>
+      <th scope="col"><%= @cocktail.name %></th>
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+
 <br>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.association :ingredients %>
-  <%= f.button :submit %>
-<% end %>
 
-<br>
 
 <p><%= link_to 'delete', cocktail_path(@cocktail), method: :delete %></p>
 <br>
 
 <%= link_to "Go back", cocktails_path %>
+
+<!--
+ -->
